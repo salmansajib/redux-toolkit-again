@@ -1,7 +1,11 @@
+import AddTodo from './components/AddTodo';
+import Todos from './components/Todos';
+
 function App() {
   return (
-    <div className='app'>
-      <h1 className=' text-3xl '>Hello</h1>
+    <div className=' w-screen flex flex-col items-center justify-center '>
+      <AddTodo />
+      <Todos />
     </div>
   );
 }
