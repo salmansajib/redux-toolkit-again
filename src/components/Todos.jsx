@@ -8,6 +8,10 @@ function Todos() {
 
   const dispatch = useDispatch();
 
+  const handleDelete = (id) => {
+    dispatch(removeTodo(id));
+  };
+
   return (
     <>
       <h2 className=' text-2xl font-semibold mt-5 mb-2 '>ToDos</h2>
@@ -19,7 +23,7 @@ function Todos() {
           >
             <p className=' text-white text-lg '>{todo.text}</p>
             <button
-              onClick={() => dispatch(removeTodo(todo.id))}
+              onClick={() => handleDelete(todo.id)}
               className=' text-red-400 text-2xl cursor-pointer '
             >
               <MdDeleteForever />
